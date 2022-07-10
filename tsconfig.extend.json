@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@actions/*": ["./client/actions/*"],
+      "@components/*": ["./client/components/*"],
+      "@config/*": ["./config/*"],
+      "@contexts/*": ["./client/contexts/*"],
+      "@interfaces/*": ["./interfaces/*"],
+      "@hooks/*": ["./client/hooks/*"],
+      "@modules/*": ["./client/modules/*"],
+      "@selectors/*": ["./client/selectors/*"],
+      "@styles/*": ["./client/styles/*"],
+      "@rest/*": ["./client/rest/*"],
+
+      "@helpers/*": ["./server/helpers/*"],
+      "@models/*": ["./server/models/*"],
+      "@services/*": ["./server/services/*"],
+      "@i18n/*": ["./server/i18n/*"]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "outDir": "../../build-server",
+    "noEmit": false,
+    "sourceMap": true,
+    "module": "commonjs",
+    "strict": true,
+    "target": "es2017",
+    "moduleResolution": "node",
+    "typeRoots": ["../types", "../../node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "@config/*": ["../config/*"],
+      "@helpers/*": ["./helpers/*"],
+      "@interfaces/*": ["../interfaces/*"],
+      "@models/*": ["./models/*"],
+      "@services/*": ["./services/*"],
+      "@i18n/*": ["./i18n/*"]
+    }
+  },
+  "exclude": ["../../build", "../client"],
+  "include": ["**/*"]
+}

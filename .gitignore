@@ -1,0 +1,8 @@
+node_modules
+build
+build-server
+temp
+.eslintcache
+.vscode
+react-app-env.d.ts
+yarn-error.log

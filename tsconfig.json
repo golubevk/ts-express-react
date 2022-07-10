@@ -1,0 +1,39 @@
+{
+  "extends": "./tsconfig.extend.json",
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "downlevelIteration": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext"
+  },
+  "exclude": ["webpack.config.server.js", "Gruntfile.js"],
+  "typeRoots": ["./src/types", "./node_modules/@types/"],
+  "ts-node": {
+    "files": true,
+    "baseUrl": "./src",
+    "compilerOptions": {
+      "module": "commonjs",
+      "paths": {
+        "@models/*": ["./server/models/*"],
+        "@config/*": ["./config/*"],
+        "@helpers/*": ["./server/helpers/*"],
+        "@interfaces/*": ["./interfaces/*"],
+        "@services/*": ["./server/services/*"],
+        "@i18n/*": ["./server/i18n/*"]
+      }
+    }
+  },
+  "include": ["src"]
+}

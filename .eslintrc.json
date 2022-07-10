@@ -1,0 +1,85 @@
+{
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "es6": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts", ".tsx"]
+      }
+    },
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "16.9.0"
+    }
+  },
+  "extends": [
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": ["./tsconfig.json", "./src/server/tsconfig.json"]
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import",
+    "unicorn",
+    "sonarjs",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // prettier intersection
+    "consistent-return": "off",
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "multiline-ternary": "off",
+    "react/jsx-wrap-multilines": [
+      "error",
+      { "declaration": false, "assignment": false }
+    ],
+
+    // a11y accepted fails
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/media-has-caption": "off",
+
+    // typescript-eslint enables
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": ["off"],
+    "indent": "off",
+    "@typescript-eslint/indent": ["off"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "semi": "off",
+    "@typescript-eslint/semi": ["error"],
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": ["error"],
+
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["_id", "_method"]
+      }
+    ],
+
+    "no-duplicate-string": "off",
+
+    "sonarjs/cognitive-complexity": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ]
+}
